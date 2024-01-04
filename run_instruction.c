@@ -18,10 +18,10 @@ instruction_t *instructions, unsigned int line_number)
 	int i = 0;
 	unsigned int value;
 
-	opcode = strtok(line, " $\n\t");
+	opcode = strtok(line, " \n\t$");
 	if (opcode == NULL)
 		return;
-	arg = strtok(NULL, " $\n\t");
+	arg = strtok(NULL, " \n\t$");
 	if (arg != NULL)
 		value = atoi(arg);
 	while (instructions[i].opcode != NULL)
@@ -49,4 +49,3 @@ instruction_t *instructions, unsigned int line_number)
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
-
