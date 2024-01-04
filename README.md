@@ -35,11 +35,11 @@ To use the Monty Interpreter, follow these steps:
 ## Instructions
 The interpreter supports the following Monty script instructions:
 
-- push: Pushes an element onto the stack.
-- pop: Pops the top element from the stack.
-- pall: Prints all elements in the stack.
-- pint: Prints the value at the top of the stack.
-- swap: Swaps the top two elements of the stack.
+- **push**: Pushes an element onto the stack.
+- **pop**: Pops the top element from the stack.
+- **pall**: Prints all elements in the stack.
+- **pint**: Prints the value at the top of the stack.
+- **swap**: Swaps the top two elements of the stack.
 
 ## Example
 Consider the following Monty script (example.m):
