@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL, *curr = NULL, *temp = NULL;
 	instruction_t instructions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint},
-		{"pop", pop}, {"swap", swap}, {NULL, NULL}
+		{"pop", pop}, {"swap", swap}, {"add", add},
+		{NULL, NULL}
 	};
 
 	if (argc != 2)
