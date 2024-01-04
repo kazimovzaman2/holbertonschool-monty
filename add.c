@@ -9,7 +9,7 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp = NULL, *curr = NULL, *add = NULL;
+	stack_t *temp = *stack, *curr = NULL, *add = NULL;
 
 	if (!(*stack) || !(*stack)->next)
 	{
@@ -25,9 +25,7 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	temp = *stack;
-	*stack = temp->next;
-	(*stack)->n += temp->n;
-	free(temp);
-	(*stack)->prev = NULL;
+	temp->next->n += temp->n;
+	pop(&temp, line_number);
+	*stack = temp;
 }
