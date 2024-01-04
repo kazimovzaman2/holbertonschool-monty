@@ -2,26 +2,25 @@
 
 
 /**
- * pop - removes the top element of the stack
+ * pop - check the code
  *
- * @stack: pointer to the stack
- * @line_number: line number
+ * @stack: var
+ * @line_number: var
  *
- * Return: void
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-    stack_t *temp = NULL;
+	stack_t *temp = NULL;
 
-    if (!stack || !(*stack))
-    {
-        fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
-        exit(EXIT_FAILURE);
-    }
+	if (!stack || !(*stack))
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-    temp = *stack;
-    *stack = (*stack)->next;
-    free(temp);
-    if (*stack)
-        (*stack)->prev = NULL;
+	temp = *stack;
+	*stack = (*stack)->next;
+	free(temp);
+	if (*stack)
+		(*stack)->prev = NULL;
 }
