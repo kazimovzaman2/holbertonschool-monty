@@ -10,8 +10,7 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-    stack_t *new = malloc(sizeof(stack_t));
-    stack_t *curr = NULL, *add = NULL;
+    stack_t *temp = NULL, *curr = NULL, *add = NULL;
 
     if (!stack || !(*stack) || !(*stack)->next)
     {
@@ -27,9 +26,9 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
     }
 
-
-    new->n = (*stack)->n + (*stack)->next->n;
-    new->next = (*stack)->next->next;
-    new->prev = NULL;
-    *stack = new;
+    temp = *stack;
+    *stack = (*stack)->next;
+    (*stack)->n += temp->n;
+    free(temp);
+    (*stack)->prev = NULL;
 }
