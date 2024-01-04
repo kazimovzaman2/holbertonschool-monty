@@ -13,7 +13,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	stack_t *temp = NULL, *curr = NULL, *add = NULL;
 	int num = 0;
 
-	if (!stack || !(*stack))
+	if (!stack || !(*stack) || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		curr = *stack;
