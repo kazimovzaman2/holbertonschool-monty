@@ -11,7 +11,8 @@
  *
  * Return: Always 0.
  */
-void run_instruction(char *line, stack_t **stack, instruction_t *instructions, unsigned int line_number)
+void run_instruction(char *line, stack_t **stack,
+instruction_t *instructions, unsigned int line_number)
 {
 	char *opcode = NULL, *arg = NULL;
 	int i = 0;
