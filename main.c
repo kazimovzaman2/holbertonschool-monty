@@ -2,12 +2,12 @@
 
 
 /**
- * main - check the code
+ * main - entry point
  *
- * @argc: var
- * @argv: var
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: Always 0.
+ * Return: EXIT_SUCCESS or EXIT_FAILURE
  */
 int main(int argc, char *argv[])
 {

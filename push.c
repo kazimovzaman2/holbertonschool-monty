@@ -2,10 +2,10 @@
 
 
 /**
- * push - check the code
+ * push - pushes an element to the stack
  *
- * @stack: var
- * @line_number: var
+ * @stack: pointer to the stack
+ * @line_number: line number of the file
  *
  */
 void push(stack_t **stack, unsigned int line_number)

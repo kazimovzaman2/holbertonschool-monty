@@ -2,11 +2,11 @@
 
 
 /**
- * is_number - check the code
+ * is_number - checks if a string is a number
  *
- * @arg: var
+ * @arg: string to check
  *
- * Return: Always 0.
+ * Return: 1 if true, 0 if false
  */
 int is_number(char *arg)
 {

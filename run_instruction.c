@@ -2,14 +2,13 @@
 
 
 /**
- * run_instruction - check the code
+ * run_instruction - runs the instruction
  *
- * @line: var
- * @stack: var
- * @instructions: var
- * @line_number: var
+ * @line: line of the file
+ * @stack: pointer to the stack
+ * @instructions: array of instructions
+ * @line_number: line number of the file
  *
- * Return: Always 0.
  */
 void run_instruction(char *line, stack_t **stack,
 instruction_t *instructions, unsigned int line_number)

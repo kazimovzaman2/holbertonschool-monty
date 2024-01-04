@@ -2,10 +2,10 @@
 
 
 /**
- * pall - check the code
+ * pall - prints all the values on the stack
  *
- * @stack: var
- * @line_number: var
+ * @stack: pointer to the stack
+ * @line_number: line number of the file
  *
  */
 void pall(stack_t **stack, unsigned int line_number)
