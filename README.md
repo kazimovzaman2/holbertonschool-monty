@@ -9,7 +9,6 @@ This is a simple stack-based interpreter written in C for the Monty scripting la
 - [Instructions](#instructions)
 - [Example](#example)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
