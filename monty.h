@@ -1,13 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -39,5 +38,10 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-#endif
 
+void run_instruction(char *line, stack_t **stack, instruction_t *instructions, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+int is_number(char *arg);
+
+#endif
