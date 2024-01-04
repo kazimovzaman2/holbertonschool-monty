@@ -20,7 +20,7 @@ To use the Monty Interpreter, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/monty-interpreter.git
+   git clone https://github.com/kazimovzaman2/holbertonschool-monty
    cd monty-interpreter
    ```
 2. Compile the code:
