@@ -9,12 +9,12 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-    stack_t *temp = NULL, *curr = NULL, *add = NULL;
+	stack_t *temp = NULL, *curr = NULL, *add = NULL;
 
-    if (!stack || !(*stack) || !(*stack)->next)
-    {
-        fprintf(stderr, "L%d: can't add, stack too short", line_number);
-        curr = *stack;
+	if (!(*stack) || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		curr = *stack;
 		while (curr != NULL)
 		{
 			add = curr;
@@ -23,11 +23,11 @@ void add(stack_t **stack, unsigned int line_number)
 		}
 		stack = NULL;
 		exit(EXIT_FAILURE);
-    }
+	}
 
-    temp = *stack;
-    *stack = temp->next;
-    (*stack)->n += temp->n;
-    free(temp);
-    (*stack)->prev = NULL;
+	temp = *stack;
+	*stack = temp->next;
+	(*stack)->n += temp->n;
+	free(temp);
+	(*stack)->prev = NULL;
 }
