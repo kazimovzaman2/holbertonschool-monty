@@ -1,41 +1,51 @@
 #include "monty.h"
 
 
+/**
+ * run_instruction - check the code
+ *
+ * @line: var
+ * @stack: var
+ * @instructions: var
+ * @line_number: var
+ *
+ * Return: Always 0.
+ */
 void run_instruction(char *line, stack_t **stack, instruction_t *instructions, unsigned int line_number)
 {
-    char *opcode = NULL, *arg = NULL;
-    int i = 0;
-    unsigned int value;
+	char *opcode = NULL, *arg = NULL;
+	int i = 0;
+	unsigned int value;
 
-    opcode = strtok(line, " $\n\t");
-    if (opcode == NULL)
-        return;
-    arg = strtok(NULL, " $\n\t");
-    if (arg != NULL)
-        value = atoi(arg);
-    while (instructions[i].opcode != NULL)
-    {
-        if (strcmp(opcode, instructions[i].opcode) == 0)
-        {
-            if (strcmp(opcode, "push") == 0)
-            {
-                if (arg == NULL || is_number(arg) == 0)
-                {
-                    fprintf(stderr, "L%u: usage: push integer\n", line_number);
-                    exit(EXIT_FAILURE);
-                }
-                instructions[i].f(stack, value);
-                return;
-            }
-            else
-            {
-                instructions[i].f(stack, line_number);
-                return;
-            }
-        }
-        i++;
-    }
-    fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-    exit(EXIT_FAILURE);
+	opcode = strtok(line, " $\n\t");
+	if (opcode == NULL)
+		return;
+	arg = strtok(NULL, " $\n\t");
+	if (arg != NULL)
+		value = atoi(arg);
+	while (instructions[i].opcode != NULL)
+	{
+		if (strcmp(opcode, instructions[i].opcode) == 0)
+		{
+			if (strcmp(opcode, "push") == 0)
+			{
+				if (arg == NULL || is_number(arg) == 0)
+				{
+					fprintf(stderr, "L%u: usage: push integer\n", line_number);
+					exit(EXIT_FAILURE);
+				}
+				instructions[i].f(stack, value);
+				return;
+			}
+			else
+			{
+				instructions[i].f(stack, line_number);
+				return;
+			}
+		}
+		i++;
+	}
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+	exit(EXIT_FAILURE);
 }
 
