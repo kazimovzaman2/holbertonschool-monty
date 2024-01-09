@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
 
 	free_stack(stack);
 
-	stack = NULL;
 	free(line);
 	fclose(file);
 	return (EXIT_SUCCESS);
