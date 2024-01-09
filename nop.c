@@ -2,7 +2,7 @@
 
 
 /**
- * nop - does nothing
+ * nop - doesn't do  anything
  * @stack: pointer to the top of the stack
  * @line_number: line number of the opcode
  *
