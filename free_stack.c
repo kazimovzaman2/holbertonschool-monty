@@ -4,7 +4,7 @@
  * free_stack - a function that frees all dynamically
  * allocated memory associated with a stack.
  *
- * @stack: pointer to the head of the stack
+ * @stack: pointer to the stack
  *
  */
 
