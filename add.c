@@ -21,7 +21,7 @@ void add(stack_t **stack, unsigned int line_number)
 			curr = curr->next;
 			free(add);
 		}
-		stack = NULL
+		stack = NULL;
 		exit(EXIT_FAILURE);
 	}
 
