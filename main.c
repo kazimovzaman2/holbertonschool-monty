@@ -38,13 +38,8 @@ int main(int argc, char *argv[])
 		run_instruction(line, &stack, instructions, line_number);
 	}
 
-	curr = stack;
-	while (curr != NULL)
-	{
-		temp = curr;
-		curr = curr->next;
-		free(temp);
-	}
+	free_stack(stack);
+
 	stack = NULL;
 	free(line);
 	fclose(file);
