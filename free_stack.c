@@ -10,7 +10,7 @@
 
 void free_stack(stack_t *stack)
 {
-	stack_t curr, temp;
+	stack_t *curr = NULL, *temp = NULL;
 
 	curr = stack;
 
@@ -18,7 +18,7 @@ void free_stack(stack_t *stack)
 	{
 		temp = curr;
 		curr = curr->next;
-		free(temp)
+		free(temp);
 	}
 	stack = NULL;
 }
