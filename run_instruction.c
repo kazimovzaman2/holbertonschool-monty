@@ -46,5 +46,5 @@ instruction_t *instructions, unsigned int line_number)
 		i++;
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-	exit(EXIT_FAILURE);
+	
 }
