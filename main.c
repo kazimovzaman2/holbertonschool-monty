@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	FILE *file;
 	char *line = NULL;
 	size_t len = 0, line_number = 0;
-	stack_t *stack = NULL, *curr = NULL, *temp = NULL;
+	stack_t *stack = NULL;
 	instruction_t instructions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint},
 		{"pop", pop}, {"swap", swap}, {"add", add},
