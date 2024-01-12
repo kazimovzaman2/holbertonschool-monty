@@ -7,7 +7,7 @@
  * @line_number: line number being executed from script file
  *
  */
-void div(stack_t **stack, unsigned int line_number)
+void _div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 	int div = 0;

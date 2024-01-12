@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		{"push", push}, {"pall", pall}, {"pint", pint},
 		{"pop", pop}, {"swap", swap}, {"add", add},
 		{"nop", nop}, {"sub", sub},
-		{"div", div}, {NULL, NULL}
+		{"div", _div}, {NULL, NULL}
 	};
 
 	if (argc != 2)
