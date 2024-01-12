@@ -2,7 +2,7 @@
 
 
 /**
- * div - divides the second top element of the stack by the top element
+ * _div - divides the second top element of the stack by the top element
  * @stack: double pointer to the head of the stack
  * @line_number: line number being executed from script file
  *
