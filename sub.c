@@ -6,7 +6,6 @@
  * @stack: double pointer to the head of the stack
  * @line_number: line number being executed from script file
  *
- * Return: void
  */
 void sub(stack_t **stack, unsigned int line_number)
 {
