@@ -17,7 +17,7 @@ instruction_t *instructions, unsigned int line_number)
 	int i = 0;
 	unsigned int value;
 
-	if (line[0] == '#')
+	if (line[0] == '\0' || line[0] == '#')
 		return;
 
 	opcode = strtok(line, " \n\t$");
