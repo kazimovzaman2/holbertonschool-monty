@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		{"pop", pop}, {"swap", swap}, {"add", add},
 		{"nop", nop}, {"sub", sub}, {"div", _div},
 		{"mul", mul}, {"mod", mod}, {"pchar", pchar},
-		{"pstr", pstr}, {NULL, NULL}
+		{NULL, NULL}
 	};
 
 	if (argc != 2)
