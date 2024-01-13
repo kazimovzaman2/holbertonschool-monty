@@ -31,5 +31,6 @@ void pstr(stack_t **stack, unsigned int line_number)
 		return;
 
 	pstr_recursive(*stack);
-	putchar('\n');
+	if ((*stack)->n != 0)
+		putchar('\n');
 }
